@@ -44,6 +44,8 @@
 </div>
 <canvas id="myCanvas" width="600" height="300"></canvas>
 <img src="#"/>
+
+<img id = "flowers" src="https://edencampbell.github.io/2126/img/Flowers.jpeg">
   
   
       <script id="rendered-js" >
@@ -89,8 +91,9 @@ function drawBot(bot) {
   ctx.lineTo(x, y);
   ctx.stroke();
   if (bot.r == bots[0].r) {
-    ctx.fillStyle = "rgba(255,0,0,.5)";
     ctx.fill();
+          var img = document.getElementById("flowers");
+  ctx.drawImage(img, bots[0].x, bots[0].y, 20, 20);
   }
 }
 
